@@ -1,4 +1,13 @@
 # YT Downloader
+![GitHub](https://img.shields.io/github/license/intervisionlord/YT_Downloader)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/intervisionlord/YT_Downloader/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/intervisionlord/YT_Downloader/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/intervisionlord/YT_Downloader/?branch=master)
+![GitHub last commit](https://img.shields.io/github/last-commit/intervisionlord/YT_Downloader)
+
+- [YT Downloader](#yt-downloader)
+  - [Способ запуска](#способ-запуска)
+  - [Потоки и нагрузка](#потоки-и-нагрузка)
+
 Многопоточный массовый загрузчик видео с youtube
 
 ## Способ запуска
