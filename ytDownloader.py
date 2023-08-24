@@ -37,14 +37,20 @@ def dumper(pack_urls):
       for url in pack_urls:
             loader = YouTube(url)
             filename = re.sub('[\W\s]', '_', f'{loader.author}_{loader.title}')
-            videos = loader.streams.filter(mime_type = 'video/mp4', resolution = '1080p', type = 'video')
+            print(loader.streams)
+            try:
+                  videos = loader.streams.filter(resolution = '360p', type = 'video')
+            except:
+                  videos = loader.streams.filter(resolution = '360p', type = 'video')
+            print(videos)
             video_id = int(list(videos.itag_index.copy().keys())[0])
-            audios = loader.streams.filter(mime_type = 'audio/mp4', type = 'audio', bitrate = '128kbps')
+            audios = loader.streams.filter(mime_type = 'audio/mp4', type = 'audio', bitrate = '48kbps')
             audio_id = int(list(audios.itag_index.copy().keys())[0])
             threads = Thread(target = multithread, args = (videos, audios, video_id, audio_id, filename))
             threads.start()
             
 def video_merge(filename):
+      # Вызов комманды с несколькими параметрами
       subprocess.call(
             [
                   'bin/ffmpeg.exe',
